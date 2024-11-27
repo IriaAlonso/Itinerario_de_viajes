@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Mapa Interactivo</title>
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+   <style>
+       /* Hacer que el mapa ocupe toda la ventana */
+       #map {
+           height: 100%;
+           width: 100%;
+       }
+       body, html {
+           margin: 0;
+           height: 100%;
+       }
+   </style>
+</head>
+<body>
+   <div id="map"></div>
+   <script>
+       // Esta función se llamará desde Java para inicializar el mapa
+       function initializeMap(startLatLng, endLatLng) {
+           // Inicializar el mapa centrado en el punto de inicio
+           var map = L.map('map').setView(startLatLng, 6);
+           // Cargar los mosaicos de OpenStreetMap
+           L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+               maxZoom: 19
+           }).addTo(map);
+           // Agregar marcadores de inicio y fin con popups
+           L.marker(startLatLng).addTo(map)
+               .openPopup();
+           L.marker(endLatLng).addTo(map)
+               .bindPopup("Fin: " + endLatLng);
+           // Trazar la ruta entre los puntos de inicio y fin
+           L.polyline([startLatLng, endLatLng], {color: 'blue'}).addTo(map);
+       }
+   </script>
+</body>
+</html>

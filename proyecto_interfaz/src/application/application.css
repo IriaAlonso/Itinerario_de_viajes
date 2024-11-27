@@ -1,0 +1,74 @@
+.root {
+  -fx-background-color: #EAF2F8; /* azul claro tenue */
+}
+
+.label {
+  -fx-text-fill: #1B2631; /* azul oscuro profundo */
+}
+
+.button {
+  -fx-background-color: #2874A6; /* azul vibrante */
+  -fx-text-fill: #FFFFFF; /* blanco */
+}
+
+.button:hover {
+  -fx-background-color: #1F618D; /* azul más oscuro */
+  -fx-text-fill: #F2F4F4; /* blanco suave */
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 4, 0, 2, 2);
+}
+
+.table-view {
+  -fx-background-color: #FFFFFF; /* blanco */
+  -fx-table-cell-border-color: #AED6F1; /* borde azul tenue */
+}
+
+.table-view .column-header {
+  -fx-background-color: #D4E6F1; /* azul pálido */
+  -fx-text-fill: #1B2631; /* azul oscuro profundo */
+}
+
+.table-view .cell {
+  -fx-background-color: #EBF5FB; /* azul claro */
+  -fx-text-fill: #1B2631; /* azul oscuro profundo */
+  -fx-border-color: #AED6F1; /* borde azul tenue */
+}
+
+.table-view .cell:filled {
+  -fx-background-color: #D6EAF8; /* azul más claro */
+}
+
+.text-field, .combo-box, .date-picker {
+  -fx-background-color: #FFFFFF; /* blanco */
+  -fx-text-fill: #1B2631; /* azul oscuro profundo */
+  -fx-border-color: #3498DB; /* azul brillante */
+}
+
+.text-field:focused, .combo-box:focused, .date-picker:focused {
+  -fx-border-color: #2874A6; /* azul vibrante */
+}
+
+.combo-box .list-cell {
+  -fx-background-color: #FFFFFF; /* blanco */
+  -fx-text-fill: #1B2631; /* azul oscuro profundo */
+}
+
+.combo-box .list-cell:hover {
+  -fx-background-color: #2874A6; /* azul vibrante */
+  -fx-text-fill: #FFFFFF; /* blanco */
+}
+
+.date-picker .text-field {
+  -fx-background-color: #FFFFFF; /* blanco */
+  -fx-text-fill: #1B2631; /* azul oscuro profundo */
+}
+
+.date-picker:focused .text-field {
+  -fx-border-color: #2874A6; /* azul vibrante */
+}
+
+.image-view {
+  -fx-background-radius: 50%;
+  -fx-border-color: #2874A6; /* azul vibrante */
+  -fx-border-width: 2;
+}
+
